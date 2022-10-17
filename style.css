@@ -1,0 +1,173 @@
+:root {
+	--softBlue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+	--mainBG: hsl(217, 54%, 11%);
+	--cardBG: hsl(216, 50%, 16%);
+	--cardHover: hsla(178, 100%, 50%, 0.541);
+	--line: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.8rem;
+	font-family: "Outfit", sans-serif;
+	background: var(--mainBG);
+}
+
+.container {
+	padding: 2rem;
+}
+
+.flex {
+	display: flex;
+}
+
+.center {
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	color: var(--white);
+	font-size: 2rem;
+}
+
+p {
+	color: var(--softBlue);
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+main {
+	width: 100vw;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+	transition: 0.3s ease;
+}
+
+a:hover {
+	color: var(--cyan);
+}
+
+.card {
+	background: var(--cardBG);
+	border-radius: 15px;
+	margin: 2rem;
+}
+
+.item {
+	border-radius: 10px;
+}
+
+.item-container {
+	position: relative;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 98.1%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.3s ease;
+	background: var(--cardHover);
+	border-radius: 10px;
+	/* padding: 2rem; */
+}
+
+.item-container:hover .overlay {
+	opacity: 1;
+}
+
+.item-icon {
+	color: white;
+	width: 4.5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+.item-name {
+	margin-bottom: 1rem;
+}
+
+.description {
+	line-height: 3rem;
+	margin-bottom: 1rem;
+}
+
+.info {
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+
+.icon {
+	width: 1rem;
+	object-fit: contain;
+}
+
+.clock {
+	width: 1.8rem;
+}
+
+.value {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.price {
+	color: var(--cyan);
+}
+
+.remaining-time {
+	display: flex;
+	gap: 0.75rem;
+}
+
+.line {
+	border-color: var(--line);
+	margin-bottom: 1.5rem;
+}
+
+.author {
+	gap: 1.5rem;
+	align-items: center;
+}
+
+.avatar {
+	width: 10%;
+	border-radius: 50%;
+	border: 1px solid var(--white);
+}
+
+@media only screen and (min-width: 376px) {
+	.card {
+		max-width: 335px;
+	}
+}
